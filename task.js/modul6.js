@@ -31,17 +31,57 @@
 //   event.currentTarget.reset();
 // }
 ///////////////////////////////////////////
+//вставляємо елемент h1 в розмітку та клонуємо його  
 
-/достукуємось до двох елементів
-const container = document.querySelector('.container');
-const footer = document.querySelector('footer');
+//достукуємось до двох елементів
+// const container = document.querySelector('.container');
+// const footer = document.querySelector('footer');
 
-//створимо h1
-const h1 = document.createElement('h1');
+// //створимо h1
+// const h1 = document.createElement('h1');
 
-// додаємо h1 текст
-h1.textContent = 'Hello world!';
+// // додаємо h1 текст
+// h1.textContent = 'Hello world!';
 
-//h1 добавляю до container
-container.append(h1);
+// //h1 добавляю до container
+// container.append(h1);
 
+// // перевикористовуємо змінну h1 до footer
+// footer.append(h1);
+
+// //клонуємо h1 щоб був у двох  різних місцях
+// footer.append(h1.cloneNode(true));// це глибоке копіювання
+
+/////////////////////////////////
+//ця функція спрацьовує при події change це коли ми знімаємо
+//фокус з інпута і клікнули за межами інпута
+
+// const select = document.querySelector(".pizza-select");
+// const textOutput = document.querySelector(".text-output");
+// const valueOutput = document.querySelector(".value-output");
+
+// setOutput();
+
+// select.addEventListener("change", setOutput);
+
+// function setOutput() {
+//   const selectedOptionValue = select.value;
+//   //тут зберігається порядковий індекс
+//   const selectedOptionIndex = select.selectedIndex;
+//   //тут зберігається масив усіх значень option
+//   const selectedOptionText = select.options[selectedOptionIndex].text;
+// //тут зберігається текст контент
+// //достукуємось до першого span
+//   textOutput.textContent = selectedOptionText;
+//   //достукуємось до другого span
+//   valueOutput.textContent = selectedOptionValue;
+// }
+
+//////////////////////////////////////////
+
+//додаємо обробники подій
+// 'show modal зявиться відразу як обновиться сторінка
+const showModal = () => {
+  console.log('show modal');
+};
+addEventListener('DOMContentLoaded', showModal); 
